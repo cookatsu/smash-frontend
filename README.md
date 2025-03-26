@@ -5,17 +5,7 @@ Dabei steht „S“ für „Superior“ (höchste Stufe), gefolgt von absteigend
 Es können Rankings vergeben, gelöscht und ausgelesen werden, und das für jeden einzelnen Charakter, wie bspw. Mario oder Pac-Man.
 
 
-
 ###FRONTEND###
-
-
-
-Das Frontend lässt sich in 3 Hauptseiten gliedern:
--Home-
--Info zum Spiel
--Text & Trailer kombiniert, um das Spiel in Szene zu setzen
-
-
 
 
 -Kämpfer-
@@ -36,32 +26,28 @@ Reststruktur Frontend:
 -shared & services fürs Backend
 -Responsive ✓, flex u. grid
 -public als assets verwendet
+-PostgreSQL-DB (DBeaver in dem Fall) verwendet
 
 Umgang mit KI:
 ChatGPT wurde im Projekt zur Unterstützung eingesetzt, vor allem zur Strukturierung, Codeoptimierung bei technischen Fragen und wurde angepasst für Clean Code.
 Verwendung insbesondere:
 -Eintrage wie fighters bei kämpfer.ts
 -Einrichtung von Routing, Provider, AppConfig, main.ts
--video autoplays 24/7 zu machen
 -HTML & CSS: Strukturierung und Styling vor allem, Animationen, Responsive Design
--bei ts.comp: vor allem Codevereinfachung, wie Methoden, saubere Logik, Absicherung von Bedingungen  
+-ts.comps
 -services & shared: API-Kommunikation (GET, POST, DELETE mit fetch)
 -Readme (teils) für Formulierungen, Tabellenaufbau
 
+Verwendungen von Angular, Node.js, PostgreSQL
 
 Installation:
 git clone https://github.com/dein-name/smash-frontend.git
-
-
--node.js u. npm installieren, npm install sowie npm install -g @angular/cli
--PostgreSQL-DB (DBeaver in dem Fall) verwendet
 cd smash-frontend
 npm install
 ng serve
-
-
 Anwendung läuft anschließend unter:
 ➡️ http://localhost:4200
+
 
 
 ###BACKEND###
