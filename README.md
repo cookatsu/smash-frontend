@@ -50,18 +50,16 @@ Verwendung insbesondere:
 
 
 Installation:
-
-empf:
-[Visual Studio Code](https://code.visualstudio.com/)
-
+git clone https://github.com/dein-name/smash-frontend.git
 
 
 -node.js u. npm installieren, npm install sowie npm install -g @angular/cli
 -PostgreSQL-DB (DBeaver in dem Fall) verwendet
+cd smash-frontend
+npm install
+ng serve
 
 
-
-ng serve 
 Anwendung läuft anschließend unter:
 ➡️ http://localhost:4200
 
