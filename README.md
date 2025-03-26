@@ -38,7 +38,7 @@ Reststruktur Frontend:
 -public als assets verwendet
 
 Umgang mit KI:
-ChatGPT wurde im Projekt punktuell zur Unterstützung eingesetzt, vor allem zur Strukturierung, Codeoptimierung und für gezielte Hilfestellungen bei technischen Fragen. Die Umsetzung erfolgte stets mit eigenem Verständnis und wurde angepasst für Clean Code.
+ChatGPT wurde im Projekt zur Unterstützung eingesetzt, vor allem zur Strukturierung, Codeoptimierung bei technischen Fragen und wurde angepasst für Clean Code.
 Verwendung insbesondere:
 -Eintrage wie fighters bei kämpfer.ts
 -Einrichtung von Routing, Provider, AppConfig, main.ts
@@ -62,6 +62,11 @@ ng serve
 
 Anwendung läuft anschließend unter:
 ➡️ http://localhost:4200
+
+
+###BACKEND###
+
+
 
 
 ⠀⠀⠀⠀⠀⠀⠀⠀ 
