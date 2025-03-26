@@ -1,0 +1,32 @@
+<div class="kaempfer-page"></div>
+
+<div class="kaempfer-container container-fluid">
+
+  <!-- Titelzeile -->
+  <div class="kaempfer-title-container mb-4">
+    <h1 class="kaempfer-title d-flex align-items-center">
+      Wähle deinen Kämpfer!
+      <span (click)="toggleSort()" class="sort-icon ms-2">
+        {{ isDescending ? '▼' : '▲' }}
+      </span>
+    </h1>
+  </div>
+
+  <div class="grid">
+    <div class="fighter-card" *ngFor="let fighter of fighters" (click)="openTrailer(fighter.name)">
+      <img [src]="'/' + fighter.image" [alt]="fighter.name">
+    </div>
+  </div>
+
+  <div class="smash-title text-center mt-5">
+    Das größte „Super Smash Bros.“ aller Zeiten!
+  </div>
+
+  <div *ngIf="selectedFighter" class="trailer-overlay" (click)="closeTrailer()">
+    <div class="trailer-container" (click)="$event.stopPropagation()">
+      <h2>{{ selectedFighter.name }}</h2>
+      <iframe [src]="selectedFighter.trailerUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,153 @@
+
+
+.Banner {
+    position: relative;
+    height: 93vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vBannerbereich {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.vBannerbereich video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.Leiste {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 99px 40px;
+    gap: 40px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.section-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.section-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.section-text p {
+    font-size: 26px;
+    line-height: 1.8;
+    max-width: 90%;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.section-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    animation: floatAnimation 3s infinite alternate ease-in-out;
+}
+
+.section iframe {
+    border-radius: 10px;
+    width: 90%;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .section-text, .section-image {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .section-text h2 {
+        font-size: 28px;
+    }
+
+    .section-text p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .section-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .Leiste {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 18px;
+        padding: 30px 10px;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        position: relative;
+    }
+}

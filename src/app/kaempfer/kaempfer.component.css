@@ -1,0 +1,193 @@
+
+.sort-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.sort-icon:hover {
+    transform: scale(1.2);
+    color: gray;
+}
+
+.kaempfer-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    min-height: 100%;
+    background-image: url('/seria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.kaempfer-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    z-index: 2; 
+    padding-top: 64vh;
+    padding-bottom: 400px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3px;  max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;}
+
+.fighter-card {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.fighter-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.fighter-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.fighter-card:hover::before {
+    opacity: 1;
+}
+
+.fighter-card:hover {
+    transform: scale(1);
+}
+
+.trailer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.trailer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.trailer-container h2 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.trailer-container iframe {
+    width: 90vw;
+    height: calc(90vw * 9 / 16);
+    max-width: 1024px;
+    max-height: 576px;
+    border: none;
+}
+
+.kaempfer-title-container {
+    width: 1200px;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    text-align: left;
+    position: relative;
+    margin: -40px auto 0px auto;
+    z-index: 10;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.kaempfer-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.smash-title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 94px;
+    font-weight: bold;
+    color: rgb(212, 209, 209);
+    margin-top: 400px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 768px) {
+    .smash-title {
+        font-size: 36px;  margin-top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .smash-title {
+        font-size: 28px;   margin-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .trailer-container iframe {
+        width: 95vw;
+        height: calc(95vw * 9 / 16);
+    }
+}
+ 

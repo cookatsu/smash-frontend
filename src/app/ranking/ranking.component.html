@@ -1,0 +1,38 @@
+
+<video autoplay loop muted playsinline class="hintergrund">
+    <source src="/banners.mp4" type="video/mp4">
+  </video>
+  
+  <div class="rankingcont container-fluid">
+  
+   <div class="bild">
+      <img src="/tierlist.png" alt="Tier List">
+    </div>
+  
+   <div class="kopfzeile row">
+      <span class="kaempfer col-6">KÄMPFER</span>
+      <span class="rang col-6 text-end">RANKING</span>
+    </div>
+  <div class="rangliste">
+    <div class="eintrag" *ngFor="let teilnehmer of teilnehmer"> 
+  
+       <img class="Icon" src="/assets/{{ teilnehmer | lowercase }}.png" alt="{{ teilnehmer }} Icon"
+        onerror="this.src='/assets/default.png'">
+     <span class="kaempfername">{{ teilnehmer }}</span>
+    <span *ngIf="meinung[teilnehmer]" class="delete-vote" (click)="entferneMeinung(teilnehmer)">🗑️</span> 
+
+<div class="raenge">
+    <button *ngFor="let klasse of klassen"
+            (click)="bestaetigung(teilnehmer, klasse)"
+            [class.active]="meinung[teilnehmer] === klasse">
+      <span>{{ klasse }}</span>
+    </button>
+  </div>
+  
+  
+    </div>
+  </div>
+  
+  
+  </div>
+  

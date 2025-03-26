@@ -1,0 +1,63 @@
+
+<div id="app-container">
+<header class="navbar">
+  <a href="https://www.nintendo.com/de-de/index.html" target="_blank" class="logo-link">
+    <img src="/nintendo-logo.png" alt="Nintendo" class="logo nintendo-logo">
+   </a>
+<img src="/smash-logo.png" alt="Smash" class="logo smash-logo">
+ <div class="nav-buttons">
+      <button (click)="navigateTo('/')">Home</button>
+      <button (click)="navigateTo('/kaempfer')">Kämpfer</button>
+      <button (click)="navigateTo('/ranking')">Ranking</button>
+      <a href="https://www.nintendo.com/de-de/Spiele/Nintendo-Switch-Spiele/Super-Smash-Bros-Ultimate-1395713.html?utm_campaign=SuperSmashBros%7Chowtobuy&utm_medium=referral&utm_source=smashbros.com#Kaufoptionen" target="_blank" class="buy-button">Kaufoptionen</a>
+  </div>
+
+  <div class="hamburger-menu" (click)="toggleMobileMenu()">☰</div>
+
+
+</header>
+
+<main >
+  <router-outlet></router-outlet>
+</main>
+
+
+<div class="mobile-menu" [class.active]="mobileMenuOpen">
+  <div class="close-menu" (click)="toggleMobileMenu()">✖</div>
+  <button (click)="navigateTo('/')">Home</button>
+  <button (click)="navigateTo('/kaempfer')">Kämpfer</button>
+  <button (click)="navigateTo('/ranking')">Ranking</button>
+  <a href="https://www.nintendo.com/de-de/Spiele/Nintendo-Switch-Spiele/Super-Smash-Bros-Ultimate-1395713.html" target="_blank" class="buy-button">Kaufoptionen</a>
+</div>
+
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-notice">
+          <p>
+              Während des Spielens online wird eine Internetverbindung benötigt. Um Online-Services nutzen zu können, 
+              musst du einen Nintendo-Account erstellen und den Vertrag zum Nintendo-Account akzeptieren. 
+              Die Nintendo-Account-Datenschutzrichtlinie findet Anwendung. Manche Online-Services sind möglicherweise 
+              nicht in allen Ländern verfügbar. Für Online-Dienste wird ein Nintendo-Account benötigt. 
+              Ab September 2018 erfordern einige Online-Dienste die Mitgliedschaft bei einem kostenpflichtigen Service. 
+              Die Verfügbarkeit kostenpflichtiger Online-Dienste kann für einige Länder eingeschränkt sein. 
+              Weitere Informationen zu kostenpflichtigen Online-Diensten.
+          </p>
+      </div>
+<div class="footer-content">
+         
+          <p>
+              © 2018 Nintendo<br>
+              Original Game: © Nintendo / HAL Laboratory, Inc.<br>
+              Characters: © Nintendo / HAL Laboratory, Inc. / Pokémon. / Creatures Inc. / GAME FREAK inc. / 
+              SHIGESATO ITOI / APE inc. / INTELLIGENT SYSTEMS / Konami Digital Entertainment / SEGA / 
+              CAPCOM CO., LTD. / BANDAI NAMCO Entertainment Inc. / MONOLITHSOFT / CAPCOM U.S.A., INC. / 
+              SQUARE ENIX CO., LTD. / ATLUS / Microsoft / SNK CORPORATION. / Mojang AB / Disney
+          </p>
+
+          <p>
+          *Aufnahmen zeigen das Spiel in der Entwicklungsphase. </p>
+      </div>
+  </div>
+</footer>
+</div>
