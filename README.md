@@ -51,12 +51,17 @@ Verwendung insbesondere:
 
 Installation:
 
--node.js u. npm installieren, npm install
+empf:
+[Visual Studio Code](https://code.visualstudio.com/)
+
+
+
+-node.js u. npm installieren, npm install sowie npm install -g @angular/cli
 -PostgreSQL-DB (DBeaver in dem Fall) verwendet
+
+
+
 ng serve 
-
-
-
 Anwendung läuft anschließend unter:
 ➡️ http://localhost:4200
 
